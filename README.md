@@ -1,7 +1,7 @@
-<h1 align="center">Educa.</h1>
+<h1 align="center">Stocks Serviços de TI.</h1>
 
 <p align="center">
- <img src="./img/2023-10-02-22-47-02.remuxed.gif">
+ <img src="./img/Capturar.PNG">
 </p>
 
 <br>
@@ -16,12 +16,12 @@ Este projeto foi desenvolvido utilizando:
 <br>
 
 # Status do projeto
-Finalizado (Versão Desktop/Mobile): https://quintinopro.github.io/Educa./
+Em desenvolvimento: https://quintinopro.github.io/stocks/
 
 <br>
 
 # Inspiração
-Site multipaginas educativo
+Site multipaginas da empresa Stocks TI.
 
 <br>
 
