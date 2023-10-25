@@ -1,7 +1,7 @@
 <h1 align="center">Stocks Serviços de TI.</h1>
 
 <p align="center">
- <img src="./img/Capturar.PNG">
+ <img src="./Capturar.PNG">
 </p>
 
 <br>
