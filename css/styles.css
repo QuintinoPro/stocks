@@ -48,7 +48,7 @@ body{
 }
 
 section{
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -65,7 +65,7 @@ section{
 }
 
 .btn:hover{
-    background-color: var(--white);
+    background-color: var(--green);
     color: var(--black);
 
 }
@@ -100,7 +100,7 @@ section{
 
 .header .flex .logo{
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--green);
 }
 
 .header .flex .navbar a{
@@ -121,25 +121,28 @@ section{
 }
 
 .home{
-    margin-top: 6rem;
+    margin: 7rem;
 }
 
 .home .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap-reverse;
-    gap: 1.5rem;
 }
 
 .home .row .content{
+    display: flex;
     flex:1 1 40rem;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    gap: 5rem;
 }
 
 .home .row .image{
     flex:1 1 30rem;
-    height: 35rem;
-    padding-top: 5rem;
+    height: auto;
 }
 
 .home .row .image img{
@@ -147,12 +150,15 @@ section{
 }
 
 .home .row .content h3{
-    margin-bottom: 1rem;
+    margin: 0; /* Remover margens extras */
     font-size: 7rem;
     color: var(--white);
     line-height: 1;
-    height: 35rem;
-    padding-top: 10rem;
+}
+
+.home .row .content a{
+    align-items: center;
+    
 }
 
 .home .row .content h3 span{
@@ -232,6 +238,7 @@ section{
     padding: 2rem;
     margin-bottom: 4rem;
     user-select: none;
+    height: 48rem;
 }
 
 .courses .slide img{
