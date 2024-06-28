@@ -121,7 +121,8 @@ section{
 }
 
 .home{
-    margin: 7rem;
+    margin: 0 auto;
+    
 }
 
 .home .row{
