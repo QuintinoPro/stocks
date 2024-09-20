@@ -25,4 +25,5 @@ Site multipaginas da empresa Stocks TI.
 
 <br>
 
+# Since: 25/10/2023
 
