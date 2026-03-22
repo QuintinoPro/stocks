@@ -1,0 +1,13 @@
+# Design sources
+*.psd
+*.ai
+*.eps
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Assistant files
+.agents/
+.gemini/
+/tmp/

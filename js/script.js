@@ -6,6 +6,24 @@ menuBtn.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+// Fechar menu ao clicar em um link (mobile)
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.onclick = () => {
+        menuBtn.classList.remove('fa-times');
+        navbar.classList.remove('active');
+    }
+});
+
+// Efeito de scroll no header
+window.onscroll = () => {
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+    }else{
+        document.querySelector('.header').classList.remove('active');
+    }
+}
+
+// Inicialização do Swiper
 var swiper = new Swiper(".course-slider",{
     spaceBetween: 20,
     grabCursor: true,
