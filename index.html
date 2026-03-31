@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <!-- Custom CSS -->
@@ -25,12 +25,12 @@
     <header class="header" id="header">
         <section class="flex">
             <a href="#home" class="logo">
-                <svg class="logo-icon" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4" cy="18" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <circle cx="13" cy="10" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <circle cx="21" cy="14" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <circle cx="30" cy="4" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <polyline points="4,18 13,10 21,14 30,4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <svg class="logo-icon" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="26,88 63,46 89,63 132,27" stroke="#F5A623" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="26" cy="88" r="14" stroke="#F5A623" stroke-width="10"/>
+                    <circle cx="63" cy="46" r="14" stroke="#F5A623" stroke-width="10"/>
+                    <circle cx="89" cy="63" r="13" stroke="#F5A623" stroke-width="10"/>
+                    <circle cx="132" cy="27" r="12" stroke="#F5A623" stroke-width="10"/>
                 </svg>
                 <span class="logo-text">STOCKS</span>
             </a>
@@ -48,11 +48,22 @@
 
     <!-- ===== HERO ===== -->
     <section class="home" id="home">
+        <!-- Particle canvas -->
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <!-- Animated grid accent lines -->
+        <div class="accent-lines" aria-hidden="true">
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+        </div>
         <div class="row">
             <div class="content">
-                <p class="hero-label">Agência de Marketing Digital</p>
+                <p class="hero-label">Agência de Serviços Digitais</p>
                 <h3>Posicionamos seu<br><span>Negócio no Digital</span></h3>
-                <p class="hero-sub">Ajudamos empreendedores a crescer na internet com estratégia, design e tráfego pago — do zero aos resultados.</p>
+                <p class="hero-sub">Ajudamos empreendedores a crescer na internet com estratégia, design e tráfego pago, do zero aos resultados.</p>
                 <div class="hero-btns">
                     <a href="#courses" class="btn btn-primary">Ver Serviços</a>
                     <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Olá!+Vi+o+site+da+Stocks+e+quero+saber+mais+sobre+os+serviços&type=phone_number&app_absent=0" class="btn btn-outline" target="_blank">
@@ -302,12 +313,12 @@
     <footer class="footer">
         <section>
             <div class="footer-logo">
-                <svg class="logo-icon" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4" cy="18" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <circle cx="13" cy="10" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <circle cx="21" cy="14" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <circle cx="30" cy="4" r="3" stroke="currentColor" stroke-width="2.5"/>
-                    <polyline points="4,18 13,10 21,14 30,4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <svg class="logo-icon" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="26,88 63,46 89,63 132,27" stroke="#F5A623" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="26" cy="88" r="14" stroke="#F5A623" stroke-width="10"/>
+                    <circle cx="63" cy="46" r="14" stroke="#F5A623" stroke-width="10"/>
+                    <circle cx="89" cy="63" r="13" stroke="#F5A623" stroke-width="10"/>
+                    <circle cx="132" cy="27" r="12" stroke="#F5A623" stroke-width="10"/>
                 </svg>
                 <span>STOCKS</span>
             </div>
@@ -343,6 +354,77 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+
+    <!-- Hero Particle Canvas -->
+    <script>
+    (function () {
+        const canvas = document.getElementById('hero-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        function setSize() {
+            canvas.width  = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+        setSize();
+
+        let particles = [];
+        let raf = 0;
+
+        function count() {
+            return Math.floor((canvas.width * canvas.height) / 8000);
+        }
+
+        function make() {
+            const fadeDelay = Math.random() * 600 + 100;
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                speed: Math.random() / 5 + 0.08,
+                opacity: 0.65,
+                fadeDelay,
+                fadeStart: Date.now() + fadeDelay,
+                fadingOut: false,
+            };
+        }
+
+        function reset(p) {
+            p.x         = Math.random() * canvas.width;
+            p.y         = Math.random() * canvas.height;
+            p.speed     = Math.random() / 5 + 0.08;
+            p.opacity   = 0.65;
+            p.fadeDelay = Math.random() * 600 + 100;
+            p.fadeStart = Date.now() + p.fadeDelay;
+            p.fadingOut = false;
+        }
+
+        function init() {
+            particles = [];
+            for (let i = 0; i < count(); i++) particles.push(make());
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(function (p) {
+                p.y -= p.speed;
+                if (p.y < 0) reset(p);
+                if (!p.fadingOut && Date.now() > p.fadeStart) p.fadingOut = true;
+                if (p.fadingOut) {
+                    p.opacity -= 0.007;
+                    if (p.opacity <= 0) reset(p);
+                }
+                ctx.fillStyle = 'rgba(245, 166, 35, ' + p.opacity + ')';
+                ctx.fillRect(p.x, p.y, 0.7, Math.random() * 2 + 1);
+            });
+            raf = requestAnimationFrame(draw);
+        }
+
+        function onResize() { setSize(); init(); }
+        window.addEventListener('resize', onResize);
+        init();
+        raf = requestAnimationFrame(draw);
+    })();
+    </script>
 
 </body>
 </html>
