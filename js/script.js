@@ -45,6 +45,8 @@ const revealTargets = [
     '.count .box',
     '.about .row',
     '.courses .slide',
+    '.process-step',
+    '.faq-item',
     '.metric-card',
     '.testimonial-card',
     '.contact .row',
