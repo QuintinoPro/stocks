@@ -51,10 +51,6 @@ html {
 body {
     background-color: var(--black);
     color: var(--white);
-    background-image:
-        linear-gradient(rgba(245, 166, 35, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(245, 166, 35, 0.025) 1px, transparent 1px);
-    background-size: 64px 64px;
 }
 
 section {
@@ -726,16 +722,7 @@ body::before {
     background: var(--light-bg);
 }
 
-.resultados::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(245, 166, 35, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(245, 166, 35, 0.035) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-}
+
 
 .metrics-grid {
     display: grid;
