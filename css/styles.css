@@ -719,7 +719,7 @@ body::before {
 /* ===== RESULTADOS ===== */
 .resultados {
     position: relative;
-    background: var(--light-bg);
+    padding-top: 5rem;
 }
 
 
