@@ -51,6 +51,10 @@ html {
 body {
     background-color: var(--black);
     color: var(--white);
+    background-image:
+        linear-gradient(rgba(245, 166, 35, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245, 166, 35, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
 }
 
 section {
@@ -386,11 +390,11 @@ body::before {
 
 
 .home .content h3 {
-    font-size: 9rem;
+    font-size: 6.5rem;
     color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    line-height: .95;
+    line-height: 1.05;
     margin-bottom: 3rem;
     text-transform: uppercase;
 }
