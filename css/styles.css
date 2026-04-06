@@ -423,6 +423,7 @@ body::before {
     flex: 1 1 45rem;
     text-align: center;
     position: relative;
+    transform: translateY(-4rem); /* Ajuste de altura para manter o alinhamento óptico */
 }
 
 .home .image::before {
