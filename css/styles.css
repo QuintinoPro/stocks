@@ -1493,25 +1493,23 @@ select.box option { background: #0a0a0a; color: var(--white); }
 
 /* ===== HERO RESULTS CARD ===== */
 .hero-results-card {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: 3rem auto 0;
     background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(1.5rem);
     border: .1rem solid var(--border-bright);
     box-shadow: var(--glow-md);
-    padding: 2rem 2.5rem;
-    border-radius: .3rem;
-    width: 90%;
+    padding: 2.5rem;
+    border-radius: .4rem;
+    width: 95%;
     max-width: 45rem;
     z-index: 10;
     text-align: left;
-    animation: card-float 4s ease-in-out infinite;
+    animation: card-float-rel 4s ease-in-out infinite;
 }
-@keyframes card-float {
-    0%, 100% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, -1rem); }
+@keyframes card-float-rel {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-.8rem); }
 }
 .hero-results-card__header {
     display: flex;
@@ -1521,7 +1519,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: var(--light-white);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 .hero-results-card__dot {
     width: .8rem;
@@ -1537,17 +1535,17 @@ select.box option { background: #0a0a0a; color: var(--white); }
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 .hero-results-card__number {
-    display: block;
-    font-size: 4rem;
+    display: inline-block;
+    font-size: 4.5rem;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     color: var(--primary);
-    line-height: 1;
-    margin-bottom: .5rem;
+    line-height: .9;
+    margin-right: .5rem;
 }
-.hero-results-card > span { 
-    display: block;
-    font-size: 1.4rem;
+.hero-results-card > span:not(.hero-results-card__number) { 
+    display: inline-block;
+    font-size: 1.5rem;
     color: var(--white);
     margin-bottom: 1.5rem;
 }
@@ -1754,5 +1752,4 @@ select.box option { background: #0a0a0a; color: var(--white); }
 
 @media (max-width: 768px) {
     .porque-col--highlight { clip-path: none; }
-    .hero-results-card { width: 100%; }
 }
