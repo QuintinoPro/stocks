@@ -61,6 +61,8 @@ section {
     max-width: 1280px;
     margin: 0 auto;
     padding: 9rem 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* ===== NOISE OVERLAY ===== */
@@ -1016,6 +1018,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     border-top: .1rem solid rgba(245, 166, 35, 0.06);
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
 .footer::before {
