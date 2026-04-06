@@ -50,6 +50,8 @@ const revealTargets = [
     '.metric-card',
     '.testimonial-card',
     '.contact .row',
+    '.porque-col',
+    '.team-card',
 ];
 
 revealTargets.forEach(selector => {
