@@ -888,6 +888,13 @@ body::before {
     top: 10rem;
 }
 
+@media (max-width: 991px) {
+    .contact .image {
+        position: relative;
+        top: 0;
+    }
+}
+
 .contact .image img { width: 100%; }
 .contact-side { flex: 1 1 50rem; }
 
