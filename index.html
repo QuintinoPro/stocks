@@ -44,8 +44,6 @@
 
     <!-- ===== HERO ===== -->
     <section class="home" id="home">
-        <!-- Particle canvas -->
-        <canvas id="hero-canvas" class="hero-canvas"></canvas>
         <!-- Animated grid accent lines -->
         <div class="accent-lines" aria-hidden="true">
             <div class="hline"></div>
@@ -548,81 +546,15 @@
     </a>
     <!-- ===== /WHATSAPP FLUTUANTE ===== -->
 
+    <!-- Particles bg container -->
+    <div id="particles-js" class="particles-bg"></div>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-
-    <!-- Hero Particle Canvas -->
-    <script>
-    (function () {
-        const canvas = document.getElementById('hero-canvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-
-        function setSize() {
-            canvas.width  = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
-        }
-        setSize();
-
-        let particles = [];
-        let raf = 0;
-
-        function count() {
-            return Math.floor((canvas.width * canvas.height) / 8000);
-        }
-
-        function make() {
-            const fadeDelay = Math.random() * 600 + 100;
-            return {
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                speed: Math.random() / 5 + 0.08,
-                opacity: 0.65,
-                fadeDelay,
-                fadeStart: Date.now() + fadeDelay,
-                fadingOut: false,
-            };
-        }
-
-        function reset(p) {
-            p.x         = Math.random() * canvas.width;
-            p.y         = Math.random() * canvas.height;
-            p.speed     = Math.random() / 5 + 0.08;
-            p.opacity   = 0.65;
-            p.fadeDelay = Math.random() * 600 + 100;
-            p.fadeStart = Date.now() + p.fadeDelay;
-            p.fadingOut = false;
-        }
-
-        function init() {
-            particles = [];
-            for (let i = 0; i < count(); i++) particles.push(make());
-        }
-
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(function (p) {
-                p.y -= p.speed;
-                if (p.y < 0) reset(p);
-                if (!p.fadingOut && Date.now() > p.fadeStart) p.fadingOut = true;
-                if (p.fadingOut) {
-                    p.opacity -= 0.007;
-                    if (p.opacity <= 0) reset(p);
-                }
-                ctx.fillStyle = 'rgba(245, 166, 35, ' + p.opacity + ')';
-                ctx.fillRect(p.x, p.y, 0.7, Math.random() * 2 + 1);
-            });
-            raf = requestAnimationFrame(draw);
-        }
-
-        function onResize() { setSize(); init(); }
-        window.addEventListener('resize', onResize);
-        init();
-        raf = requestAnimationFrame(draw);
-    })();
-    </script>
 
 </body>
 </html>
