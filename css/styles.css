@@ -1755,6 +1755,47 @@ select.box option { background: #0a0a0a; color: var(--white); }
     padding-top: 1.5rem;
 }
 
+/* ===== CARD EM BREVE (IA) ===== */
+.slide--coming-soon {
+    border-color: rgba(138, 43, 226, 0.25);
+    background: rgba(10, 5, 20, 0.95);
+    position: relative;
+}
+
+.slide--coming-soon .slide-icon-wrap {
+    background: rgba(138, 43, 226, 0.1);
+    border-color: rgba(138, 43, 226, 0.3);
+}
+
+.slide--coming-soon .slide-icon-wrap i {
+    color: #a855f7;
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));
+}
+
+.slide--coming-soon:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+.slide-coming-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: #a855f7;
+    background: rgba(168, 85, 247, 0.08);
+    border: .1rem solid rgba(168, 85, 247, 0.25);
+    border-radius: 10rem;
+    padding: .45rem 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.slide-coming-badge i { font-size: 1rem; }
+
 /* ===== METRIC SECTOR ===== */
 .metric-sector {
     display: block;
