@@ -439,25 +439,6 @@ body::before {
     animation: pulse-blob 5s ease-in-out infinite;
 }
 
-/* Scan line */
-.home .image::after {
-    content: '';
-    position: absolute;
-    left: 0; right: 0;
-    height: .15rem;
-    background: linear-gradient(to right, transparent, rgba(245, 166, 35, 0.5), transparent);
-    animation: scan-line 5s linear infinite;
-    pointer-events: none;
-    z-index: 2;
-    top: 0;
-}
-
-@keyframes scan-line {
-    0%   { top: 5%; opacity: 0; }
-    5%   { opacity: 1; }
-    95%  { opacity: 1; }
-    100% { top: 95%; opacity: 0; }
-}
 
 .home .image img {
     width: 100%;
