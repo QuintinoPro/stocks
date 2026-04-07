@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Stocks TI — Agência de Marketing Digital que posiciona empreendedores para o futuro digital. Social Media, Tráfego Pago, Design Gráfico, Desenvolvimento Web e mais.">
-    <title>Agência Stocks | Marketing Digital & Presença Online</title>
+        content="Agência Stocks — Posicionamos pequenos negócios na internet com estratégia personalizada, equipe completa e resultado real. Social Media, Tráfego Pago, Design e mais.">
+    <title>Agência Stocks | Posicionamos Empresas na Internet</title>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stocksit.com.br/">
+    <meta property="og:title" content="Agência Stocks — Posicionamos Empresas na Internet">
+    <meta property="og:description" content="Transformamos pequenos negócios em grandes marcas digitais com estratégia personalizada, equipe completa e resultado que aparece no faturamento.">
+    <meta property="og:image" content="https://stocksit.com.br/img/logo%20transparente.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://stocksit.com.br/">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Google Fonts -->
@@ -42,7 +50,7 @@
                 <a href="#resultados">Resultados</a>
                 <a href="#contact">Contato</a>
             </nav>
-            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="menu-btn" class="fas fa-bars" role="button" aria-label="Abrir menu"></div>
         </section>
     </header>
     <!-- ===== /HEADER ===== -->
@@ -60,9 +68,7 @@
         </div>
         <div class="row">
             <div class="content">
-                <p class="hero-social-proof">
-                </p>
-                <h3>Posicionamos<br><span>Empresas</span><br>na Internet</h3>
+                <h1>Posicionamos<br><span>Empresas</span><br>na Internet</h1>
                 <p class="hero-sub">"Transformamos pequenos negócios em grandes marcas digitais, com estratégia
                     personalizada, equipe completa e resultado que aparece no faturamento."</p>
                 <div class="hero-btns">
@@ -115,7 +121,7 @@
         <section class="about" id="about">
             <div class="row">
                 <div class="image">
-                    <img src="img/Developer activity-bro.svg" alt="Equipe Stocks TI">
+                    <img src="img/Developer activity-bro.svg" alt="Equipe Stocks TI" loading="lazy">
                 </div>
                 <div class="content">
                     <span class="section-label">Quem Somos</span>
@@ -140,7 +146,7 @@
     <!-- ===== POR QUE A STOCKS ===== -->
     <section class="porque" id="porque">
         <span class="section-label center">Nosso Diferencial</span>
-        <h1 class="heading">Por que a <span>Stocks?</span></h1>
+        <h2 class="heading">Por que a <span>Stocks?</span></h2>
 
         <div class="porque-grid">
             <div class="porque-col reveal">
@@ -186,7 +192,7 @@
     <!-- ===== SERVIÇOS ===== -->
     <section class="courses" id="courses">
         <span class="section-label center">O que fazemos</span>
-        <h1 class="heading">Não fazemos posts por fazer.<br><span>Fazemos conteúdo que vende.</span></h1>
+        <h2 class="heading">Não fazemos posts por fazer.<br><span>Fazemos conteúdo que vende.</span></h2>
         <div class="swiper course-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
@@ -229,7 +235,7 @@
                     <div class="slide-coming-badge"><i class="fas fa-clock"></i> Em breve</div>
                     <div class="slide-icon-wrap"><i class="fas fa-robot"></i></div>
                     <h3>Automação com IA</h3>
-                    <p>Automatize processos repetitivos do seu negócio com inteligência artificial — atendimento, qualificação de leads, fluxos e muito mais.</p>
+                    <p>Automatize processos repetitivos do seu negócio com inteligência artificial. Atendimento, qualificação de leads, fluxos e muito mais.</p>
                     <div class="slide-tags">IA · Automação · Processos</div>
                 </div>
             </div>
@@ -242,7 +248,7 @@
     <div class="section-stripe">
         <section class="process" id="processo">
             <span class="section-label center">Método Stocks</span>
-            <h1 class="heading">Como <span>Trabalhamos</span></h1>
+            <h2 class="heading">Como <span>Trabalhamos</span></h2>
             <div class="process-steps">
 
                 <div class="process-step">
@@ -297,7 +303,7 @@
     <div class="section-stripe">
         <section class="faq" id="faq">
             <span class="section-label center">Dúvidas Frequentes</span>
-            <h1 class="heading">Perguntas <span>&amp; Respostas</span></h1>
+            <h2 class="heading">Perguntas <span>&amp; Respostas</span></h2>
             <div class="faq-list">
 
                 <details class="faq-item">
@@ -374,11 +380,11 @@
     <!-- ===== CONTATO ===== -->
     <section class="contact" id="contact">
         <span class="section-label center">Vamos crescer juntos</span>
-        <h1 class="heading"><span>Entre em</span> Contato</h1>
+        <h2 class="heading"><span>Entre em</span> Contato</h2>
 
         <div class="row">
             <div class="image">
-                <img src="img/Contact us-amico1.svg" alt="Entre em contato com a Stocks TI">
+                <img src="img/Contact us-amico1.svg" alt="Entre em contato com a Stocks TI" loading="lazy">
             </div>
 
             <div class="contact-side">
@@ -418,19 +424,19 @@
                     <input type="hidden" name="_language" value="pt-BR">
                     <input type="hidden" name="_next" value="https://agenciastocks.com/obrigado.html">
 
-                    <span>Seu nome</span>
-                    <input type="text" required placeholder="Escreva seu nome completo" maxlength="50" name="name"
+                    <label for="field-name">Seu nome</label>
+                    <input id="field-name" type="text" required placeholder="Escreva seu nome completo" maxlength="50" name="name"
                         class="box">
 
-                    <span>Seu email</span>
-                    <input type="email" required placeholder="Escreva um email válido" maxlength="50" name="email"
+                    <label for="field-email">Seu email</label>
+                    <input id="field-email" type="email" required placeholder="Escreva um email válido" maxlength="50" name="email"
                         class="box">
 
-                    <span>Seu WhatsApp</span>
-                    <input type="tel" required placeholder="(21) 99999-9999" maxlength="15" name="whatsapp" class="box">
+                    <label for="field-whatsapp">Seu WhatsApp</label>
+                    <input id="field-whatsapp" type="tel" required placeholder="(21) 99999-9999" maxlength="15" name="whatsapp" class="box">
 
-                    <span>Selecione o Serviço</span>
-                    <select name="servico" class="box" required>
+                    <label for="field-servico">Selecione o Serviço</label>
+                    <select id="field-servico" name="servico" class="box" required>
                         <option value="" disabled selected>Escolha o serviço desejado</option>
                         <option value="Desenvolvimento Web">Desenvolvimento Web</option>
                         <option value="VideoMaker">VideoMaker</option>
@@ -495,7 +501,7 @@
     <!-- Particles JS -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 
 </body>
 

@@ -142,8 +142,11 @@ sections.forEach(s => navObserver.observe(s));
     if (!logo || !hero) return;
 
     let isHovering = false;
+    let resumeTimer = null;
 
     hero.addEventListener('mousemove', function (e) {
+        // Cancela qualquer timer de reativação pendente
+        if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
         const rect = hero.getBoundingClientRect();
         const cx = rect.left + rect.width  / 2;
         const cy = rect.top  + rect.height / 2;
@@ -173,7 +176,8 @@ sections.forEach(s => navObserver.observe(s));
         logo.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s';
         logo.style.transform = '';
         // Após o retorno, reativa a animação e restaura a transição rápida
-        setTimeout(function () {
+        resumeTimer = setTimeout(function () {
+            resumeTimer = null;
             logo.style.animationPlayState = 'running';
             logo.style.transition = 'transform 0.12s ease-out, filter 0.3s';
         }, 620);

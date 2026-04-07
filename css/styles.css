@@ -389,7 +389,7 @@ body::before {
 }
 
 
-.home .content h3 {
+.home .content h1 {
     font-size: 6.5rem;
     color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
@@ -399,7 +399,7 @@ body::before {
     text-transform: uppercase;
 }
 
-.home .content h3 span {
+.home .content h1 span {
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -997,7 +997,8 @@ body::before {
     opacity: 0.6;
 }
 
-.contact form span {
+.contact form span,
+.contact form label {
     display: block;
     font-size: 1.2rem;
     color: var(--light-white);
@@ -1196,7 +1197,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
 
 @media (max-width: 991px) {
     html { font-size: 55%; }
-    .home .content h3 { font-size: 7rem; }
+    .home .content h1 { font-size: 7rem; }
 }
 
 /* ===== HERO EXTRAS ===== */
@@ -1487,28 +1488,45 @@ select.box option { background: #0a0a0a; color: var(--white); }
         font-size: 2rem;
     }
 
-    .home .content h3 { font-size: 5.5rem; text-align: center; }
+    .home .content h1 { font-size: 5.5rem; text-align: center; }
     .home .content .hero-label { justify-content: center; }
     .home .content .hero-sub {
         text-align: left;
         margin: 0 auto 4rem;
     }
     .home .content .hero-btns { justify-content: center; }
-}
-
     .process-connector { display: none; }
     .process-steps { gap: 1.5rem; }
     .process-step { max-width: 100%; }
     .faq-question { font-size: 1.6rem; padding: 2rem 2rem; }
     .faq-answer { padding: 2rem; }
     .trust-badges { gap: .8rem; }
+}
 
 @media (max-width: 450px) {
     html { font-size: 50%; }
-    .home .content h3 { font-size: 4.8rem; }
+    .home .content h1 { font-size: 4.8rem; }
     .metrics-grid { grid-template-columns: 1fr; }
     .about .about-values { grid-template-columns: 1fr; }
     .contact form { padding: 2.5rem 2rem; }
+    .whatsapp-float { width: 5rem; height: 5rem; bottom: 1.5rem; right: 1.5rem; }
+    .whatsapp-float i { font-size: 2.4rem; }
+}
+
+/* ===== FOCO DE TECLADO ===== */
+*:focus-visible {
+    outline: .2rem solid rgba(245, 166, 35, 0.7);
+    outline-offset: .3rem;
+    border-radius: .2rem;
+}
+
+/* ===== ACESSIBILIDADE: REDUÇÃO DE MOVIMENTO ===== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
 }
 
 
