@@ -1705,17 +1705,20 @@ select.box option { background: #0a0a0a; color: var(--white); }
     font-weight: 600;
 }
 .porque-badge {
-    position: absolute;
-    top: 1.8rem;
-    right: -3.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
     background: var(--gradient);
     color: var(--black);
-    font-weight: 800;
-    font-size: 1.1rem;
-    padding: .5rem 3.5rem;
-    transform: rotate(45deg);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: .12rem;
     text-transform: uppercase;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    padding: .5rem 1.4rem;
+    border-radius: 10rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 16px rgba(245, 166, 35, 0.5);
 }
 
 /* ===== SLIDE ENHANCEMENTS ===== */
