@@ -468,6 +468,22 @@ body::before {
     opacity: 0.45;
 }
 
+.hero-logo3d {
+    opacity: 1;
+    max-width: 46rem;
+    filter:
+        drop-shadow(0 0 4rem rgba(245, 166, 35, 0.55))
+        drop-shadow(0 0 1rem rgba(245, 166, 35, 0.35));
+    animation: logo3d-float 5s ease-in-out infinite;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes logo3d-float {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50%       { transform: translateY(-1.8rem) rotate(1deg); }
+}
+
 /* ===== COUNTERS ===== */
 .count {
     padding: 5rem 2rem;
