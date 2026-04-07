@@ -468,7 +468,8 @@ body::before {
     opacity: 0.45;
 }
 
-.hero-logo3d {
+/* Maior especificidade para sobrepor .home .image img opacity: 0.45 */
+.home .image .hero-logo3d {
     opacity: 1;
     max-width: 46rem;
     filter:
@@ -477,6 +478,9 @@ body::before {
     animation: logo3d-float 5s ease-in-out infinite;
     display: block;
     margin: 0 auto;
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: transform 0.12s ease-out, filter 0.3s;
 }
 
 @keyframes logo3d-float {
