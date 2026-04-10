@@ -14,6 +14,10 @@
     --glow-lg: 0 0 70px rgba(245, 166, 35, 0.5);
     --border-dim: rgba(245, 166, 35, 0.12);
     --border-bright: rgba(245, 166, 35, 0.5);
+    --radius-sm: 0.8rem;
+    --radius-md: 1.4rem;
+    --radius-lg: 2rem;
+    --radius-pill: 10rem;
 }
 
 * {
@@ -80,17 +84,16 @@ body::before {
 
 .section-label {
     display: inline-block;
-    color: var(--primary);
+    color: var(--black);
     font-family: 'Space Mono', monospace;
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .4rem;
+    letter-spacing: .3rem;
     margin-bottom: 1.5rem;
-    padding: .6rem 1.4rem;
-    border: .1rem solid var(--border-dim);
-    border-radius: .2rem;
-    background: rgba(245, 166, 35, 0.04);
+    padding: .6rem 1.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--primary);
     position: relative;
 }
 
@@ -135,8 +138,7 @@ body::before {
     letter-spacing: .2rem;
     position: relative;
     overflow: hidden;
-    border-radius: .2rem;
-    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    border-radius: var(--radius-sm);
 }
 
 .btn-primary {
@@ -494,7 +496,7 @@ body::before {
 
 .count .box {
     background: var(--card-bg);
-    border-radius: .3rem;
+    border-radius: var(--radius-md);
     padding: 3rem 2.5rem;
     display: flex;
     align-items: center;
@@ -577,7 +579,7 @@ body::before {
     top: -.8rem; left: -.8rem;
     right: -.8rem; bottom: -.8rem;
     border: .1rem solid var(--border-dim);
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     pointer-events: none;
 }
 
@@ -630,7 +632,7 @@ body::before {
     padding: 1.2rem 1.5rem;
     background: rgba(245, 166, 35, 0.03);
     border: .1rem solid var(--border-dim);
-    border-radius: .2rem;
+    border-radius: var(--radius-sm);
     transition: all .3s;
 }
 
@@ -645,7 +647,7 @@ body::before {
 /* ===== SERVIÇOS ===== */
 .courses .slide {
     background: rgba(10, 10, 10, 0.95);
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     text-align: center;
     padding: 4rem 3rem;
     margin-bottom: 5rem;
@@ -657,31 +659,6 @@ body::before {
     backdrop-filter: blur(1rem);
 }
 
-/* Corner bracket animations */
-.courses .slide::before {
-    content: '';
-    position: absolute;
-    top: .7rem; left: .7rem;
-    width: 2rem; height: 2rem;
-    border-top: .2rem solid var(--primary);
-    border-left: .2rem solid var(--primary);
-    opacity: 0;
-    transition: opacity .3s;
-}
-
-.courses .slide::after {
-    content: '';
-    position: absolute;
-    bottom: .7rem; right: .7rem;
-    width: 2rem; height: 2rem;
-    border-bottom: .2rem solid var(--primary);
-    border-right: .2rem solid var(--primary);
-    opacity: 0;
-    transition: opacity .3s;
-}
-
-.courses .slide:hover::before,
-.courses .slide:hover::after { opacity: 1; }
 
 .courses .slide:hover {
     border-color: var(--border-bright);
@@ -741,7 +718,7 @@ body::before {
 
 .metric-card {
     padding: 4.5rem 3rem;
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     text-align: center;
     border: .1rem solid var(--border-dim);
     background: rgba(8, 8, 8, 0.7);
@@ -800,7 +777,7 @@ body::before {
 .testimonial-card {
     background: rgba(12, 12, 12, 0.92);
     padding: 3.5rem;
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     border: .1rem solid var(--border-dim);
     backdrop-filter: blur(1rem);
     position: relative;
@@ -905,13 +882,12 @@ body::before {
     gap: 2rem;
     background: linear-gradient(135deg, #0e3d22, #1a7d44);
     padding: 2.2rem 2.5rem;
-    border-radius: .3rem;
+    border-radius: var(--radius-md);
     color: var(--white);
     margin-bottom: 3rem;
     border: .1rem solid rgba(37, 211, 102, 0.25);
     position: relative;
     overflow: hidden;
-    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
 }
 
 .whatsapp-btn::after {
@@ -962,7 +938,7 @@ body::before {
 .contact form {
     background: rgba(10, 10, 10, 0.9);
     padding: 3.5rem;
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     border: .1rem solid var(--border-dim);
     backdrop-filter: blur(1rem);
     position: relative;
@@ -992,7 +968,7 @@ body::before {
 .contact form .box {
     width: 100%;
     background: rgba(5, 5, 5, 0.85);
-    border-radius: .2rem;
+    border-radius: var(--radius-sm);
     padding: 1.4rem 1.6rem;
     font-size: 1.6rem;
     color: var(--white);
@@ -1093,12 +1069,11 @@ select.box option { background: #0a0a0a; color: var(--white); }
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: .2rem;
+    border-radius: 50%;
     font-size: 2rem;
     color: var(--light-white);
     background: rgba(18, 18, 18, 0.9);
     border: .1rem solid var(--border-dim);
-    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
 }
 
 .footer .share a:hover {
@@ -1139,8 +1114,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     box-shadow: 0 .5rem 2.5rem rgba(37, 211, 102, 0.4);
     z-index: 1000;
     animation: float 3s ease-in-out infinite;
-    border-radius: .2rem;
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    border-radius: 50%;
 }
 
 .whatsapp-float:hover {
@@ -1227,7 +1201,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     padding: 3.5rem 2.5rem;
     background: var(--card-bg);
     border: .1rem solid var(--border-dim);
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     position: relative;
     overflow: hidden;
     transition: all .35s;
@@ -1307,7 +1281,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     padding: 1.5rem 1rem;
     background: rgba(245, 166, 35, 0.03);
     border: .1rem solid var(--border-dim);
-    border-radius: .3rem;
+    border-radius: var(--radius-md);
     text-align: center;
     transition: all .3s;
 }
@@ -1335,7 +1309,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     gap: 1.5rem;
     background: rgba(245, 166, 35, 0.04);
     border: .1rem solid var(--border-dim);
-    border-radius: .3rem;
+    border-radius: var(--radius-md);
     padding: 1.8rem 2rem;
     margin-bottom: 2.5rem;
 }
@@ -1381,7 +1355,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
 .faq-item {
     background: var(--card-bg);
     border: .1rem solid var(--border-dim);
-    border-radius: .3rem;
+    border-radius: var(--radius-md);
     overflow: hidden;
     transition: border-color .3s, box-shadow .3s;
 }
@@ -1654,7 +1628,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     background: rgba(10, 10, 10, 0.7);
     border: .1rem solid var(--border-dim);
     padding: 4rem 3rem;
-    border-radius: .3rem;
+    border-radius: var(--radius-lg);
     opacity: 0.72;
     transition: all .3s;
     text-align: left;
@@ -1692,7 +1666,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     border-color: var(--border-bright);
     box-shadow: var(--glow-md);
     background: rgba(14, 14, 14, 0.95);
-    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    border-radius: var(--radius-lg);
     position: relative;
 }
 .porque-col--highlight h3 {
@@ -1730,7 +1704,7 @@ select.box option { background: #0a0a0a; color: var(--white); }
     align-items: center;
     justify-content: center;
     margin: 0 auto 2rem;
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    border-radius: var(--radius-md);
 }
 .slide-icon-wrap i {
     font-size: 2.5rem;
@@ -1814,6 +1788,3 @@ select.box option { background: #0a0a0a; color: var(--white); }
     .header .navbar a { margin-left: 1.8rem; font-size: 1.2rem; }
 }
 
-@media (max-width: 768px) {
-    .porque-col--highlight { clip-path: none; }
-}
