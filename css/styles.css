@@ -261,15 +261,58 @@ body::before {
     overflow: hidden;
 }
 
-/* ===== PARTICLES BG ===== */
-.particles-bg {
+/* ===== WARM BACKGROUND SYSTEM ===== */
+.bg-warm {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0; 
-    pointer-events: none; /* Let interactivity be handled by window */
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Large warm glow — bottom center (like Instagram "golden sunrise") */
+.bg-warm::before {
+    content: '';
+    position: absolute;
+    width: 140rem;
+    height: 140rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 166, 35, 0.18) 0%, rgba(255, 107, 0, 0.08) 35%, transparent 65%);
+    bottom: -80rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: warm-pulse 9s ease-in-out infinite;
+}
+
+/* Secondary glow — top right */
+.bg-warm::after {
+    content: '';
+    position: absolute;
+    width: 80rem;
+    height: 80rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.10) 0%, transparent 65%);
+    top: -20rem;
+    right: -20rem;
+    animation: warm-pulse 12s ease-in-out infinite reverse;
+}
+
+@keyframes warm-pulse {
+    0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    50%       { opacity: 0.65; transform: translateX(-50%) scale(1.08); }
+}
+
+/* Diagonal light rays — very subtle, like stage spotlight */
+.bg-warm .rays {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        -55deg,
+        transparent,
+        transparent 80px,
+        rgba(245, 166, 35, 0.018) 80px,
+        rgba(245, 166, 35, 0.018) 81px
+    );
 }
 
 /* ===== ACCENT GRID LINES ===== */
@@ -338,14 +381,14 @@ body::before {
     100% { opacity: 0; }
 }
 
-/* Ambient glow blobs */
+/* Ambient glow blobs — hero section */
 .home::before {
     content: '';
     position: absolute;
-    top: -15%; right: -8%;
-    width: 90rem;
-    height: 90rem;
-    background: radial-gradient(circle, rgba(245, 166, 35, 0.14) 0%, transparent 65%);
+    top: -10%; right: -5%;
+    width: 100rem;
+    height: 100rem;
+    background: radial-gradient(circle, rgba(245, 166, 35, 0.18) 0%, transparent 60%);
     pointer-events: none;
     animation: pulse-blob 7s ease-in-out infinite;
 }
@@ -353,10 +396,10 @@ body::before {
 .home::after {
     content: '';
     position: absolute;
-    bottom: -20%; left: -10%;
-    width: 70rem;
-    height: 70rem;
-    background: radial-gradient(circle, rgba(255, 107, 0, 0.10) 0%, transparent 65%);
+    bottom: -15%; left: -8%;
+    width: 80rem;
+    height: 80rem;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.13) 0%, transparent 60%);
     pointer-events: none;
     animation: pulse-blob 9s ease-in-out infinite reverse;
 }
