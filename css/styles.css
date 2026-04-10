@@ -1716,6 +1716,8 @@ select.box option { background: #0a0a0a; color: var(--white); }
     background: rgba(14, 14, 14, 0.95);
     border-radius: var(--radius-lg);
     position: relative;
+    overflow: visible;
+    padding-top: 5rem;
 }
 .porque-col--highlight h3 {
     color: var(--primary);
@@ -1726,6 +1728,11 @@ select.box option { background: #0a0a0a; color: var(--white); }
     font-weight: 600;
 }
 .porque-badge {
+    position: absolute;
+    top: -1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
     display: inline-flex;
     align-items: center;
     gap: .6rem;
@@ -1734,12 +1741,11 @@ select.box option { background: #0a0a0a; color: var(--white); }
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-size: 1.05rem;
-    letter-spacing: .12rem;
+    letter-spacing: .1rem;
     text-transform: uppercase;
-    padding: .5rem 1.4rem;
+    padding: .5rem 1.6rem;
     border-radius: 10rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 16px rgba(245, 166, 35, 0.5);
+    box-shadow: 0 0 20px rgba(245, 166, 35, 0.6);
 }
 
 /* ===== SLIDE ENHANCEMENTS ===== */
