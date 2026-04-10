@@ -198,9 +198,9 @@ if (window.particlesJS) {
             color: { value: colors.particles },
             shape: { type: "circle", stroke: { width: 0.5, color: colors.accent } },
             opacity: {
-                value: 0.7,
+                value: 0.85,
                 random: true,
-                anim: { enable: true, speed: 1, opacity_min: 0.3 },
+                anim: { enable: true, speed: 1, opacity_min: 0.4 },
             },
             size: {
                 value: 3,
@@ -211,7 +211,7 @@ if (window.particlesJS) {
                 enable: true,
                 distance: 160,
                 color: colors.lines,
-                opacity: 0.25,
+                opacity: 0.35,
                 width: 1.2,
             },
             move: { enable: true, speed: 2, random: true, out_mode: "bounce" },

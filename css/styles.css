@@ -3,9 +3,9 @@
 :root {
     --primary: #F5A623;
     --secondary: #FF6B00;
-    --black: #050505;
-    --light-bg: #080808;
-    --card-bg: rgba(14, 14, 14, 0.92);
+    --black: #0D0A07;
+    --light-bg: #120F0B;
+    --card-bg: rgba(18, 14, 9, 0.92);
     --white: #ffffff;
     --light-white: #7a7a7a;
     --gradient: linear-gradient(135deg, #F5A623 0%, #FF6B00 100%);
@@ -56,8 +56,8 @@ body {
     background-color: var(--black);
     color: var(--white);
     background-image:
-        linear-gradient(rgba(245, 166, 35, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(245, 166, 35, 0.025) 1px, transparent 1px);
+        linear-gradient(rgba(245, 166, 35, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245, 166, 35, 0.05) 1px, transparent 1px);
     background-size: 64px 64px;
 }
 
@@ -108,7 +108,7 @@ body::before {
 .heading {
     margin-bottom: 5rem;
     text-align: center;
-    font-size: 5.5rem;
+    font-size: 6.5rem;
     color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
@@ -343,9 +343,9 @@ body::before {
     content: '';
     position: absolute;
     top: -15%; right: -8%;
-    width: 80rem;
-    height: 80rem;
-    background: radial-gradient(circle, rgba(245, 166, 35, 0.07) 0%, transparent 65%);
+    width: 90rem;
+    height: 90rem;
+    background: radial-gradient(circle, rgba(245, 166, 35, 0.14) 0%, transparent 65%);
     pointer-events: none;
     animation: pulse-blob 7s ease-in-out infinite;
 }
@@ -353,10 +353,10 @@ body::before {
 .home::after {
     content: '';
     position: absolute;
-    bottom: -25%; left: -12%;
-    width: 60rem;
-    height: 60rem;
-    background: radial-gradient(circle, rgba(255, 107, 0, 0.05) 0%, transparent 65%);
+    bottom: -20%; left: -10%;
+    width: 70rem;
+    height: 70rem;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.10) 0%, transparent 65%);
     pointer-events: none;
     animation: pulse-blob 9s ease-in-out infinite reverse;
 }
@@ -392,11 +392,11 @@ body::before {
 
 
 .home .content h1 {
-    font-size: 6.5rem;
+    font-size: 9rem;
     color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    line-height: 1.05;
+    line-height: 0.92;
     margin-bottom: 3rem;
     text-transform: uppercase;
 }
@@ -703,6 +703,7 @@ body::before {
 .resultados {
     position: relative;
     padding-top: 5rem;
+    background: radial-gradient(ellipse 100% 60% at 50% 100%, rgba(245, 166, 35, 0.07) 0%, transparent 70%);
 }
 
 
@@ -853,6 +854,10 @@ body::before {
 .testimonial-author span { font-size: 1.3rem; color: var(--light-white); }
 
 /* ===== CONTACT ===== */
+.contact {
+    background: radial-gradient(ellipse 100% 60% at 50% 0%, rgba(245, 166, 35, 0.07) 0%, transparent 70%);
+}
+
 .contact .row {
     display: flex;
     align-items: flex-start;
