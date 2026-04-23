@@ -1,28 +1,53 @@
-<h1 align="center">Educa.</h1>
+# Stocks — Landing Page
 
-<p align="center">
- <img src="./img/2023-10-02-22-47-02.remuxed.gif">
+Landing page institucional da **Stocks**, desenvolvida em Next.js 16 com Tailwind CSS e animações modernas.
+
+## Tecnologias
+
+<p>
+  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js">
+  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React">
+  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript">
+  <img align="center" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
 </p>
 
-<br>
+- **Next.js 16** com Turbopack
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Motion** (animações)
+- **@paper-design/shaders-react** (background shader)
+- **Swiper** (carrossel)
+- **Lucide React** (ícones)
 
-# Tecnologias
-Este projeto foi desenvolvido utilizando:
-    <img align="center" height="30" width="40" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-    <img align="center" height="30" width="40" alt="css-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-    <img align="center" height="30" width="40" alt="js-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-          
- 
-<br>
+## Seções da Landing Page
 
-# Status do projeto
-Finalizado (Versão Desktop/Mobile): https://quintinopro.github.io/Educa./
+- **Hero** — animação de scroll com shader de fundo
+- **Sobre** — apresentação da empresa
+- **Por que Stocks** — diferenciais
+- **Serviços** — o que é oferecido
+- **Processo** — como funciona
+- **FAQ** — perguntas frequentes
+- **Contato** — formulário de contato
+- **Página de Obrigado** — confirmação de envio
 
-<br>
+## Como rodar
 
-# Inspiração
-Site multipaginas educativo
+```bash
+npm install
+npm run dev
+```
 
-<br>
+Acesse [http://localhost:3000](http://localhost:3000).
 
+## Scripts
 
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento com Turbopack |
+| `npm run build` | Build de produção |
+| `npm start` | Inicia o servidor de produção |
+
+## Status
+
+🟢 Em andamento
