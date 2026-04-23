@@ -1,173 +1,508 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font awesome cdn link -->
+    <meta name="description"
+        content="Agência Stocks — Posicionamos pequenos negócios na internet com estratégia personalizada, equipe completa e resultado real. Social Media, Tráfego Pago, Design e mais.">
+    <title>Agência Stocks | Posicionamos Empresas na Internet</title>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stocksit.com.br/">
+    <meta property="og:title" content="Agência Stocks — Posicionamos Empresas na Internet">
+    <meta property="og:description" content="Transformamos pequenos negócios em grandes marcas digitais com estratégia personalizada, equipe completa e resultado que aparece no faturamento.">
+    <meta property="og:image" content="https://stocksit.com.br/img/logo%20transparente.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://stocksit.com.br/">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Custom css file link -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Swiper css link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <title>Stocks TI</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <meta name="theme-color" content="#F5A623">
 </head>
+
 <body>
-    <!-- Header section starts -->
-    <header class="header">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
         <section class="flex">
-            <a href="#home" class="logo">Stocks TI</a>
-            <nav class="navbar">
+            <a href="#home" class="logo">
+                <img src="img/logo transparente.png" class="logo-icon" alt="Stocks TI">
+                <span class="logo-text">STOCKS</span>
+            </a>
+            <nav class="navbar" id="navbar">
                 <a href="#home">Home</a>
                 <a href="#about">Sobre</a>
+                <a href="#porque">Por que a Stocks</a>
                 <a href="#courses">Serviços</a>
+                <a href="#processo">Processo</a>
+                <a href="#resultados">Resultados</a>
                 <a href="#contact">Contato</a>
             </nav>
-            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="menu-btn" class="fas fa-bars" role="button" aria-label="Abrir menu"></div>
         </section>
     </header>
-    <!-- Header section ends -->
+    <!-- ===== /HEADER ===== -->
 
-    <!-- Home section starts -->
+    <!-- ===== HERO ===== -->
     <section class="home" id="home">
+        <!-- Animated grid accent lines -->
+        <div class="accent-lines" aria-hidden="true">
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="hline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+        </div>
         <div class="row">
             <div class="content">
-                <h3>Sua Parceira em <span>Tecnologia da Informação</span></h3>
-                <a href="#about" class="btn">Saiba Mais</a> 
+                <h1>Posicionamos<br><span>Empresas</span><br>na Internet</h1>
+                <p class="hero-sub">"Transformamos pequenos negócios em grandes marcas digitais, com estratégia
+                    personalizada, equipe completa e resultado que aparece no faturamento."</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Quero Ser Posicionado</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Olá!+Vi+o+site+da+Stocks+e+quero+saber+mais+sobre+os+serviços&type=phone_number&app_absent=0"
+                        class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                </div>
+                <p class="hero-urgency"><i class="fas fa-bolt"></i> Diagnóstico gratuito, sem compromisso, sem
+                    enrolação.</p>
             </div>
             <div class="image">
-                <img src="img/logo.png" alt="logo">
+                <img src="img/logo3d.png" alt="Agência Stocks" class="hero-logo3d">
             </div>
         </div>
     </section>
-    <!-- Home section ends -->
+    <!-- ===== /HERO ===== -->
 
-    <!-- Couter section starts -->
+    <!-- ===== COUNTERS ===== -->
     <section class="count">
         <div class="box-container">
             <div class="box">
-                <i class="fas fa-graduation-cap"></i>
+                <i class="fas fa-rocket"></i>
                 <div class="content">
-                    <h3>+2 Anos</h3>
-                    <p>Experiência</p>
+                    <h3>+3 Anos</h3>
+                    <p>de experiência</p>
                 </div>
             </div>
             <div class="box">
-                <i class="fas fa-chalkboard-user"></i>
+                <i class="fas fa-handshake"></i>
                 <div class="content">
-                   <h3>+70</h3>
-                    <p>Clientes</p>
+                    <h3>+47</h3>
+                    <p>clientes atendidos</p>
                 </div>
             </div>
-                <div class="box">
-                <i class="fas fa-face-smile"></i>
+            <div class="box">
+                <i class="fas fa-star"></i>
                 <div class="content">
                     <h3>97%</h3>
-                    <p>Satisfação</p>
+                    <p>de satisfação</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Couter section ends -->
+    <!-- ===== /COUNTERS ===== -->
 
-    <!-- About section starts -->
-    <section class="about" id="about">
-        <div class="row">
-            <div class="content">
-                <h3>Quem Somos Nós?</h3>
-                <p>🚀 Bem-vindo à Stocks Serviços de TI! 🌐</p>
-                <p>Você procura um parceiro confiável e experiente em serviços de Tecnologia da Informação? Sua busca terminou! Na Stocks Serviços de TI, estamos comprometidos em oferecer soluções de alta qualidade para atender às suas necessidades. Com nosso conhecimento e experiência, somos a escolha número um para empresas e usuários que buscam excelência em TI.</p>
-                <a href="#contact" class="btn">Entre em Contato</a>
+    <!-- ===== ABOUT ===== -->
+    <div class="section-stripe">
+        <section class="about" id="about">
+            <div class="row">
+                <div class="image">
+                    <img src="img/Developer activity-bro.svg" alt="Equipe Stocks TI" loading="lazy">
+                </div>
+                <div class="content">
+                    <span class="section-label">Quem Somos</span>
+                    <h3>Para quem não tem tempo de aprender marketing, mas não pode dar ao luxo de ignorá-lo.</h3>
+                    <p>
+                        Seu foco deve ser atender clientes e liderar o negócio, não quebrar a cabeça virando o
+                        "faz-tudo" do Instagram e Google Ads da sua própria empresa.
+                    </p>
+                    <p>
+                        Somos o time de marketing que você precisa pelo preço que faz sentido: mais estruturados que um
+                        freelancer, mais acessíveis que uma agência engessada.
+                    </p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">Quero Meu Diagnóstico
+                        Gratuito</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- ===== /ABOUT ===== -->
+
+
+    <!-- ===== POR QUE A STOCKS ===== -->
+    <section class="porque" id="porque">
+        <span class="section-label center">Nosso Diferencial</span>
+        <h2 class="heading">Por que a <span>Stocks?</span></h2>
+
+        <div class="porque-grid">
+            <div class="porque-col reveal">
+                <h3>Freelancer</h3>
+                <ul>
+                    <li><i class="fas fa-times"></i> Equipe completa</li>
+                    <li><i class="fas fa-times"></i> Estratégia integrada</li>
+                    <li><i class="fas fa-minus"></i> Prazo contratual</li>
+                    <li><i class="fas fa-minus"></i> Preço acessível</li>
+                    <li><i class="fas fa-times"></i> Atendimento dedicado</li>
+                    <li><i class="fas fa-times"></i> Resultado escalável</li>
+                </ul>
+            </div>
+
+            <div class="porque-col porque-col--highlight reveal">
+                <div class="porque-badge"><i class="fas fa-star"></i> Melhor escolha</div>
+                <h3>Stocks ✓</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Equipe multidisciplinar</li>
+                    <li><i class="fas fa-check"></i> Estratégia personalizada</li>
+                    <li><i class="fas fa-check"></i> Sem fidelidade forçada</li>
+                    <li><i class="fas fa-check"></i> Preço para PME</li>
+                    <li><i class="fas fa-check"></i> Acesso direto à equipe</li>
+                    <li><i class="fas fa-check"></i> Resultado mensurável</li>
+                </ul>
+            </div>
+
+            <div class="porque-col reveal">
+                <h3>Grande Agência</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Equipe completa</li>
+                    <li><i class="fas fa-check"></i> Estratégia integrada</li>
+                    <li><i class="fas fa-times"></i> Contrato longo</li>
+                    <li><i class="fas fa-times"></i> Preço proibitivo</li>
+                    <li><i class="fas fa-times"></i> Atendimento impessoal</li>
+                    <li><i class="fas fa-minus"></i> Resultado escalável</li>
+                </ul>
             </div>
         </div>
     </section>
-    <!-- About section ends -->
+    <!-- ===== /POR QUE A STOCKS ===== -->
 
-    <!-- Courses section Starts -->
+    <!-- ===== SERVIÇOS ===== -->
     <section class="courses" id="courses">
-        <h1 class="heading">Nossos <span>Serviços</span></h1>
+        <span class="section-label center">O que fazemos</span>
+        <h2 class="heading">Não fazemos posts por fazer.<br><span>Fazemos conteúdo que vende.</span></h2>
         <div class="swiper course-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
-                    <img src="img/Printed circuit board-bro (1).svg" alt="">
-                    <h3>Suporte Tecnico</h3>
-                    <p>Oferecemos diagnóstico e reparo de computadores, atualização de hardware, segurança cibernética e muito mais.</p>
+                    <div class="slide-icon-wrap"><i class="fas fa-hashtag"></i></div>
+                    <h3>Social Media</h3>
+                    <p>Posicionamento profissional que atrai clientes todos os dias, sem você precisar administrar os posts.</p>
+                    <div class="slide-tags">Instagram · LinkedIn · TikTok</div>
                 </div>
                 <div class="swiper-slide slide">
-                    <img src="img/Server-bro.svg" alt="">
-                    <h3>Serviços de Rede</h3>
-                    <p>Oferecemos instalação de redes, configuração de dispositivos, segurança de rede e manutenção.</p>
+                    <div class="slide-icon-wrap"><i class="fas fa-chart-line"></i></div>
+                    <h3>Tráfego Pago</h3>
+                    <p>Anúncios inteligentes para quem já busca pelo seu negócio. Menor custo e contatos rápidos.</p>
+                    <div class="slide-tags">Meta Ads · Google Ads · LinkedIn Ads</div>
                 </div>
                 <div class="swiper-slide slide">
-                    <img src="img/Website Creator-bro (1).svg" alt="">
+                    <div class="slide-icon-wrap"><i class="fas fa-palette"></i></div>
+                    <h3>Design Gráfico</h3>
+                    <p>Sua marca com identidade que transmite autoridade imediata e ajuda a fechar vendas mais fácil.</p>
+                    <div class="slide-tags">Logo · Manual Visual · Criativos</div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="slide-icon-wrap"><i class="fas fa-scissors"></i></div>
+                    <h3>Edição de Vídeos</h3>
+                    <p>Reels e Vídeos editados de forma dinâmica para reter a atenção nos primeiros segundos decisivos.</p>
+                    <div class="slide-tags">Reels · VSL · Motion</div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="slide-icon-wrap"><i class="fas fa-video"></i></div>
+                    <h3>VideoMaker</h3>
+                    <p>Produção audiovisual impecável que passa total credibilidade sobre seus serviços e produtos.</p>
+                    <div class="slide-tags">Institucional · Depoimentos · Campanhas</div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="slide-icon-wrap"><i class="fas fa-code"></i></div>
                     <h3>Desenvolvimento Web</h3>
-                    <p>Especializados em criação de sites, landing pages, desenvolvimento de software e muito mais.</p>
+                    <p>Sites e landing pages velozes focados estrategicamente em converter visitantes em clientes.</p>
+                    <div class="slide-tags">Landing Page · Site · Conversão</div>
                 </div>
-                <div class="swiper-slide slide">
-                    <img src="img/Developer activity-bro.svg" alt="">
-                    <h3>Desenvolvimento de Softwares</h3>
-                    <p>Soluções Sob Medida! Desenvolvemos software personalizado para atender às suas necessidades específicas.</p>
+                <div class="swiper-slide slide slide--coming-soon">
+                    <div class="slide-coming-badge"><i class="fas fa-clock"></i> Em breve</div>
+                    <div class="slide-icon-wrap"><i class="fas fa-robot"></i></div>
+                    <h3>Automação com IA</h3>
+                    <p>Automatize processos repetitivos do seu negócio com inteligência artificial. Atendimento, qualificação de leads, fluxos e muito mais.</p>
+                    <div class="slide-tags">IA · Automação · Processos</div>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <!-- Courses section ends -->
-       
-    <!-- Contact section starts -->
+    <!-- ===== /SERVIÇOS ===== -->
+
+    <!-- ===== COMO TRABALHAMOS ===== -->
+    <div class="section-stripe">
+        <section class="process" id="processo">
+            <span class="section-label center">Método Stocks</span>
+            <h2 class="heading">Como <span>Trabalhamos</span></h2>
+            <div class="process-steps">
+
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Diagnóstico Gratuito</h3>
+                        <p>Conversa rápida para analisarmos sua presença online e mapear as vias mais curtas para o
+                            lucro.</p>
+                    </div>
+                </div>
+
+                <div class="process-connector" aria-hidden="true"></div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Estratégia Personalizada</h3>
+                        <p>Definimos juntos os canais certos, o orçamento e as métricas exatas para o seu momento atual.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-connector" aria-hidden="true"></div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Execução e Entrega</h3>
+                        <p>Nosso time cria, edita e publica de ponta a ponta. Você apenas aprova os materiais finais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-connector" aria-hidden="true"></div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Otimização Contínua</h3>
+                        <p>O que funciona é redobrado, o que não funciona é cortado. Crescimento contínuo mês a mês.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!-- ===== /COMO TRABALHAMOS ===== -->
+
+
+
+    <!-- ===== FAQ ===== -->
+    <div class="section-stripe">
+        <section class="faq" id="faq">
+            <span class="section-label center">Dúvidas Frequentes</span>
+            <h2 class="heading">Perguntas <span>&amp; Respostas</span></h2>
+            <div class="faq-list">
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Preciso ter um orçamento grande para contratar?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Não. Montamos escopos flexíveis que fazem sentido tanto para quem está prestes a traçar metas
+                            quanto para quem já fatura alto e quer escalar.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Quanto custa contratar a Stocks?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Serviços recorrentes a partir de R$ 1.500/mês e Branding completo entre R$ 3.000 e 6.000.
+                            Tudo formatado sem sustos e multas.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Em quanto tempo vejo resultados?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>No Tráfego Pago, você capta desde a 1ª semana. Estratégias orgânicas (redes, SEO) exigem
+                            maturação de 60 a 90 dias.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Vocês atendem qual tipo de negócio?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Advocacia, tech, clínicas, esportes, infoprodutos e e-commerces. Se o seu foco é autoridade e
+                            escala, nós resolvemos.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Como funciona o diagnóstico gratuito?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Reunião de ~30 min sem compromisso para escanearmos seu posicionamento atual e te entregarmos
+                            um mapa de ação.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Preciso me envolver no processo?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Apenas para aprovar e direcionar pautas rápidas. Toda a pressão de execução e estratégia
+                            criativa fica nas costas da nossa equipe.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+    </div>
+    <!-- ===== /FAQ ===== -->
+
+    <!-- ===== CONTATO ===== -->
     <section class="contact" id="contact">
-        <h1 class="heading"><span>Entre em</span> Contato</h1>
+        <span class="section-label center">Vamos crescer juntos</span>
+        <h2 class="heading"><span>Entre em</span> Contato</h2>
 
         <div class="row">
             <div class="image">
-                <img src="img/Contact us-amico1.svg" alt="">
+                <img src="img/Contact us-amico1.svg" alt="Entre em contato com a Stocks TI" loading="lazy">
             </div>
 
-            <form action="" method="post">
-                <span>Seu nome</span>
-                <input type="text" required placeholder="escreva seu nome completo" maxlength="50" name="name" class="box">
-                <span>Seu email</span>
-                <input type="email" required placeholder="escreva um email valído" maxlength="50" name="email" class="box">
-                <span>Seu numero</span>
-                <input type="number" required placeholder="escreva um numero valído" max="99999999999" min="0" name="number" class="box" onkeypress="if(this.value.length == 10) return false;">
-                <span>Selecione o Serviço</span>
-                <select name="couses" class="box" required>
-                    <option value="" disabled selected>Selecione o Serviço --</option>
-                    <option value="Desenvolvimento Web">Desenvolvimento Web</option>
-                    <option value="Desenvolvimento Softwares">Desenvolvimento Softwares</option>
-                    <option value="Suporte Técnico">Suporte Técnico</option>
-                    <option value="Serviços de Rede">Serviços de Rede</option>
-                </select>
-                <span>Sua mensagem</span>
-                <textarea name="message" required placeholder="Escreva sua mensagem" class="box" rows="5"></textarea>
-                <input type="submit" value="Enviar Mensagem" class="btn" name="send">
-            </form>
+            <div class="contact-side">
+                <!-- WhatsApp CTA -->
+                <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Olá!+Vi+o+site+da+Stocks+e+quero+saber+mais+sobre+os+serviços&type=phone_number&app_absent=0"
+                    class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <span>Resposta em até 2h</span>
+                        <strong>Falar com um Especialista</strong>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="trust-badge"><i class="fas fa-award"></i><span>+3 Anos no Mercado</span></div>
+                    <div class="trust-badge"><i class="fas fa-users"></i><span>+27 Clientes</span></div>
+                    <div class="trust-badge"><i class="fas fa-star"></i><span>97% Satisfação</span></div>
+                </div>
+
+                <div class="or-divider"><span>ou preencha o formulário</span></div>
+
+                <!-- Garantia -->
+                <div class="form-guarantee">
+                    <i class="fas fa-shield-halved"></i>
+                    <p>Retorno express em até <strong>2 horas</strong>. Sem compromisso na análise caso não queira
+                        fechar negócio logo de cara.</p>
+                </div>
+
+                <!-- Formulário -->
+                <form action="https://formsubmit.co/contato@agenciastocks.com" method="POST" target="_blank">
+                    <!-- FormSubmit configs -->
+                    <input type="hidden" name="_subject" value="Novo contato pelo site da Stocks TI!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_language" value="pt-BR">
+                    <input type="hidden" name="_next" value="https://agenciastocks.com/obrigado.html">
+
+                    <label for="field-name">Seu nome</label>
+                    <input id="field-name" type="text" required placeholder="Escreva seu nome completo" maxlength="50" name="name"
+                        class="box">
+
+                    <label for="field-email">Seu email</label>
+                    <input id="field-email" type="email" required placeholder="Escreva um email válido" maxlength="50" name="email"
+                        class="box">
+
+                    <label for="field-whatsapp">Seu WhatsApp</label>
+                    <input id="field-whatsapp" type="tel" required placeholder="(21) 99999-9999" maxlength="15" name="whatsapp" class="box">
+
+                    <label for="field-servico">Selecione o Serviço</label>
+                    <select id="field-servico" name="servico" class="box" required>
+                        <option value="" disabled selected>Escolha o serviço desejado</option>
+                        <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                        <option value="VideoMaker">VideoMaker</option>
+                        <option value="Edição de Vídeos">Edição de Vídeos</option>
+                        <option value="Design Gráfico">Design Gráfico</option>
+                        <option value="Tráfego Pago">Tráfego Pago</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Pacote Completo">Pacote Completo</option>
+                    </select>
+
+                    <input type="submit" value="Quero Meu Diagnóstico Gratuito" class="btn btn-primary submit-btn"
+                        id="submit-btn">
+                    <p class="form-trust"><i class="fas fa-lock"></i> Seus dados estão seguros. Não enviamos spam.</p>
+                </form>
+            </div>
         </div>
     </section>
-    <!-- Contact section ends -->
+    <!-- ===== /CONTATO ===== -->
 
-    <!-- Footer section starts -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <section>
-            <div class="share">
-                <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Ol%C3%A1%2C+Tudo+bem%3F+Preciso+de+um+Servi%C3%A7o+de+TI&type=phone_number&app_absent=0" class="fab fa-whatsapp" target="_blank"></a>
-                <a href="https://www.instagram.com/stocks.ti/" class="fab fa-instagram" target="_blank"></a>
-                <a href="https://web.facebook.com/profile.php?id=61552253043195" class="fab fa-facebook-f" target="_blank"></a>
-                <a href="#" class="fab fa-linkedin" target="_blank"></a>
+            <div class="footer-logo">
+                <img src="img/logo transparente.png" class="logo-icon" alt="Stocks TI">
+                <span>STOCKS</span>
             </div>
-            <div class="credit">&copy; copyrigth @ 2023 by <span>Stocks - Serviços de TI</span> | all rights reserved!</div>
+            <p class="footer-tagline">"Posicionamos Empresas na Internet."</p>
+
+            <div class="footer-contact">
+                <a href="tel:+5521971281780"><i class="fas fa-phone"></i> (21) 97128-1780</a>
+                <a href="mailto:contato@agenciastocks.com"><i class="fas fa-envelope"></i> contato@agenciastocks.com</a>
+            </div>
+
+            <div class="share">
+                <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Olá%2C+vi+o+site+da+Stocks+e+quero+saber+mais!&type=phone_number&app_absent=0"
+                    class="fab fa-whatsapp" target="_blank" aria-label="WhatsApp"></a>
+                <a href="https://www.instagram.com/stocks.ti/" class="fab fa-instagram" target="_blank"
+                    aria-label="Instagram"></a>
+                <a href="https://web.facebook.com/profile.php?id=61552253043195" class="fab fa-facebook-f"
+                    target="_blank" aria-label="Facebook"></a>
+                <a href="https://www.linkedin.com/company/stocks-ti" class="fab fa-linkedin" target="_blank"
+                    aria-label="LinkedIn"></a>
+            </div>
+
+            <div class="credit">&copy; 2025 <span>Agência Stocks</span></div>
         </section>
     </footer>
-    <!-- Footer section ends -->
+    <!-- ===== /FOOTER ===== -->
 
-    <!-- Swiper Js link -->
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Olá!+Vi+o+site+da+Stocks+e+quero+saber+mais+sobre+os+serviços&type=phone_number&app_absent=0"
+        class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- ===== /WHATSAPP FLUTUANTE ===== -->
+
+    <!-- Warm background orbs -->
+    <div class="bg-warm" aria-hidden="true">
+        <div class="rays"></div>
+    </div>
+
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Custom js file link -->
-    <script src="js/script.js"></script>
+    <!-- Custom JS -->
+    <script defer src="js/script.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! | Stocks TI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .obrigado-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .obrigado-box {
+            background: rgba(8, 8, 8, 0.7);
+            border: .1rem solid var(--border-bright);
+            padding: 5rem 4rem;
+            border-radius: .4rem;
+            backdrop-filter: blur(1rem);
+            max-width: 60rem;
+            box-shadow: var(--glow-md);
+        }
+        .obrigado-box i {
+            font-size: 6rem;
+            color: #25d366; /* Verde sucesso/whatsapp */
+            margin-bottom: 2rem;
+        }
+        .obrigado-box h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .obrigado-box p {
+            font-size: 1.8rem;
+            color: var(--light-white);
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Malha de Partículas -->
+    <div id="particles-js" class="particles-bg"></div>
+
+    <!-- Header Simples -->
+    <header class="header" id="header" style="background: rgba(5,5,5,0.8);">
+        <section class="flex" style="justify-content: center;">
+            <a href="index.html" class="logo">
+                <img src="img/logo transparente.png" class="logo-icon" alt="Stocks TI">
+                <span class="logo-text">STOCKS</span>
+            </a>
+        </section>
+    </header>
+
+    <div class="obrigado-section">
+        <div class="obrigado-box reveal active">
+            <i class="fas fa-check-circle"></i>
+            <h1>Contato Enviado!</h1>
+            <p>Recebemos suas informações com sucesso. Nossa equipe avaliará os dados o mais rápido possível e entrará em contato para agendarmos nosso diagnóstico.</p>
+            <a href="index.html" class="btn btn-primary">Voltar para o site</a>
+        </div>
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

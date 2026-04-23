@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api:*)",
+      "Bash(grep -E \"\\\\.\\(html|css|js|json|md\\)$\")",
+      "Read(//e/CLAUDE/claude-cookbooks-main/**)",
+      "Bash(find E:CLAUDEclaude-cookbooks-main -type d -name *design* -o -type d -name *frontend* -o -type d -name *web* -o -type d -name *ui*)",
+      "Bash(xargs wc:*)",
+      "Bash(xargs grep:*)",
+      "Read(//e/OBSIDIAN - BRAIN/**)",
+      "Bash(grep -n \"^/\\\\* \\\\|^/\\\\*.*\\\\*/$\\\\|^[a-zA-Z].*{$\\\\|^\\\\..*{$\\\\|^@\" \"d:/CLIENTES - STOCKS/STOCKS/stocks/css/styles.css\")",
+      "Bash(start \"\" \"d:/CLIENTES - STOCKS/STOCKS/stocks/index.html\")"
+    ],
+    "additionalDirectories": [
+      "e:\\OBSIDIAN - BRAIN\\Dev\\Projetos"
+    ]
+  }
+}
