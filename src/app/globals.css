@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-nunito);
+  --font-barlow: var(--font-barlow-condensed);
+  --font-mono: var(--font-space-mono);
+
+  --color-primary: #F5A623;
+  --color-secondary-brand: #FF6B00;
+  --color-stocks-black: #0D0A07;
+  --color-stocks-light: #120F0B;
+  --color-light-white: #7a7a7a;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary-shadcn: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: #0D0A07;
+  --foreground: #ffffff;
+  --card: rgba(18, 14, 9, 0.92);
+  --card-foreground: #ffffff;
+  --popover: #120F0B;
+  --popover-foreground: #ffffff;
+  --primary: #F5A623;
+  --primary-foreground: #0D0A07;
+  --secondary: #120F0B;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1610;
+  --muted-foreground: #7a7a7a;
+  --accent: rgba(245, 166, 35, 0.08);
+  --accent-foreground: #F5A623;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgba(245, 166, 35, 0.12);
+  --input: rgba(245, 166, 35, 0.08);
+  --ring: rgba(245, 166, 35, 0.5);
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    @apply bg-stocks-black text-white font-sans;
+    overflow-x: hidden;
+    background-image:
+      linear-gradient(rgba(245, 166, 35, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 166, 35, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  ::selection {
+    background-color: #F5A623;
+    color: #0D0A07;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0D0A07; }
+  ::-webkit-scrollbar-thumb { background: #F5A623; border-radius: 99px; }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #F5A623 0%, #FF6B00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow-sm { box-shadow: 0 0 15px rgba(245, 166, 35, 0.25); }
+  .glow-md { box-shadow: 0 0 35px rgba(245, 166, 35, 0.4); }
+  .btn-primary-stocks {
+    @apply inline-flex items-center justify-center gap-2 font-black uppercase tracking-widest px-8 py-4 rounded-xl transition-all duration-300 cursor-pointer bg-gradient-to-r from-primary to-secondary-brand text-stocks-black hover:-translate-y-1;
+    &:hover { box-shadow: 0 0 35px rgba(245, 166, 35, 0.4); }
+  }
+  .btn-outline-stocks {
+    @apply inline-flex items-center justify-center gap-2 font-black uppercase tracking-widest px-8 py-4 rounded-xl transition-all duration-300 cursor-pointer border border-primary/50 text-primary hover:bg-primary/10;
+  }
+  .section-label-stocks {
+    @apply inline-block font-mono text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full bg-primary text-stocks-black mb-4;
+  }
+  .card-stocks {
+    @apply bg-[rgba(18,14,9,0.92)] border border-primary/[0.12] rounded-2xl backdrop-blur-sm transition-all duration-300;
+    &:hover { border-color: rgba(245, 166, 35, 0.5); box-shadow: 0 0 15px rgba(245, 166, 35, 0.25); }
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+@keyframes pulse-blob {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+.swiper-pagination-bullet { background: rgba(255,255,255,0.2) !important; }
+.swiper-pagination-bullet-active { background: #F5A623 !important; }
