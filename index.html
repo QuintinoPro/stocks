@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom css file link -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <title>Stocks TI</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <!-- Header section starts -->
+    <header class="header">
+        <section class="flex">
+            <a href="#home" class="logo">Stocks TI</a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#courses">Serviços</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+    <!-- Header section ends -->
+
+    <!-- Home section starts -->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Sua Parceira em <span>Tecnologia da Informação</span></h3>
+                <a href="#about" class="btn">Saiba Mais</a> 
+            </div>
+            <div class="image">
+                <img src="img/logo.png" alt="logo">
+            </div>
+        </div>
+    </section>
+    <!-- Home section ends -->
+
+    <!-- Couter section starts -->
+    <section class="count">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="content">
+                    <h3>+2 Anos</h3>
+                    <p>Experiência</p>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-chalkboard-user"></i>
+                <div class="content">
+                   <h3>+70</h3>
+                    <p>Clientes</p>
+                </div>
+            </div>
+                <div class="box">
+                <i class="fas fa-face-smile"></i>
+                <div class="content">
+                    <h3>97%</h3>
+                    <p>Satisfação</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Couter section ends -->
+
+    <!-- About section starts -->
+    <section class="about" id="about">
+        <div class="row">
+            <div class="content">
+                <h3>Quem Somos Nós?</h3>
+                <p>🚀 Bem-vindo à Stocks Serviços de TI! 🌐</p>
+                <p>Você procura um parceiro confiável e experiente em serviços de Tecnologia da Informação? Sua busca terminou! Na Stocks Serviços de TI, estamos comprometidos em oferecer soluções de alta qualidade para atender às suas necessidades. Com nosso conhecimento e experiência, somos a escolha número um para empresas e usuários que buscam excelência em TI.</p>
+                <a href="#contact" class="btn">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+    <!-- About section ends -->
+
+    <!-- Courses section Starts -->
+    <section class="courses" id="courses">
+        <h1 class="heading">Nossos <span>Serviços</span></h1>
+        <div class="swiper course-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <img src="img/Printed circuit board-bro (1).svg" alt="">
+                    <h3>Suporte Tecnico</h3>
+                    <p>Oferecemos diagnóstico e reparo de computadores, atualização de hardware, segurança cibernética e muito mais.</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="img/Server-bro.svg" alt="">
+                    <h3>Serviços de Rede</h3>
+                    <p>Oferecemos instalação de redes, configuração de dispositivos, segurança de rede e manutenção.</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="img/Website Creator-bro (1).svg" alt="">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Especializados em criação de sites, landing pages, desenvolvimento de software e muito mais.</p>
+                </div>
+                <div class="swiper-slide slide">
+                    <img src="img/Developer activity-bro.svg" alt="">
+                    <h3>Desenvolvimento de Softwares</h3>
+                    <p>Soluções Sob Medida! Desenvolvemos software personalizado para atender às suas necessidades específicas.</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- Courses section ends -->
+       
+    <!-- Contact section starts -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Entre em</span> Contato</h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="img/Contact us-amico1.svg" alt="">
+            </div>
+
+            <form action="" method="post">
+                <span>Seu nome</span>
+                <input type="text" required placeholder="escreva seu nome completo" maxlength="50" name="name" class="box">
+                <span>Seu email</span>
+                <input type="email" required placeholder="escreva um email valído" maxlength="50" name="email" class="box">
+                <span>Seu numero</span>
+                <input type="number" required placeholder="escreva um numero valído" max="99999999999" min="0" name="number" class="box" onkeypress="if(this.value.length == 10) return false;">
+                <span>Selecione o Serviço</span>
+                <select name="couses" class="box" required>
+                    <option value="" disabled selected>Selecione o Serviço --</option>
+                    <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                    <option value="Desenvolvimento Softwares">Desenvolvimento Softwares</option>
+                    <option value="Suporte Técnico">Suporte Técnico</option>
+                    <option value="Serviços de Rede">Serviços de Rede</option>
+                </select>
+                <span>Sua mensagem</span>
+                <textarea name="message" required placeholder="Escreva sua mensagem" class="box" rows="5"></textarea>
+                <input type="submit" value="Enviar Mensagem" class="btn" name="send">
+            </form>
+        </div>
+    </section>
+    <!-- Contact section ends -->
+
+    <!-- Footer section starts -->
+    <footer class="footer">
+        <section>
+            <div class="share">
+                <a href="https://api.whatsapp.com/send/?phone=5521971281780&text=Ol%C3%A1%2C+Tudo+bem%3F+Preciso+de+um+Servi%C3%A7o+de+TI&type=phone_number&app_absent=0" class="fab fa-whatsapp" target="_blank"></a>
+                <a href="https://www.instagram.com/stocks.ti/" class="fab fa-instagram" target="_blank"></a>
+                <a href="https://web.facebook.com/profile.php?id=61552253043195" class="fab fa-facebook-f" target="_blank"></a>
+                <a href="#" class="fab fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="credit">&copy; copyrigth @ 2023 by <span>Stocks - Serviços de TI</span> | all rights reserved!</div>
+        </section>
+    </footer>
+    <!-- Footer section ends -->
+
+    <!-- Swiper Js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Custom js file link -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
